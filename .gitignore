@@ -1,0 +1,55 @@
+# Python
+venv/
+tpu-env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Results and outputs
+outputs/
+results/
+*.pt
+*.pth
+*.safetensors
+*.pkl
+*.json
+*.png
+*.jpg
+
+# TPU specific
+.tpu_logs/
+tpu_profile/
+*.profile
+test_pjrt.log
+test_xrt.log
+full_experiment.log
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+.cache/
+~/.cache/
+*.cache
+
+# HuggingFace
+.huggingface/
