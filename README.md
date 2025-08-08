@@ -164,14 +164,3 @@ results/experiment_YYYYMMDD_HHMMSS/
 └── gradient_statistics.json      # Per-parameter gradient statistics
 ```
 
-## Citation
-
-If you use this work in your research, please cite:
-```
-@software{bert-mft,
-  title = {BERT-MFT: Mask Fine-Tuning for BERT},
-  author = {Chris Francisque},
-  year = {2025},
-  url = {https://github.com/chrisfrancisque/BERT-MFT}
-}
-```
