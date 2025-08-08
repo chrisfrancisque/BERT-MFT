@@ -129,6 +129,7 @@ class TPUGradientAnalyzer:
 
             if torch.isnan(loss):
                 xm.master_print(f"Warning: NaN loss at step {step}, skipping batch")
+                self.model.zero_grad()
                 continue
 
             #backward pass 
@@ -348,6 +349,11 @@ def run_on_tpu(index):
                 zeroing_stats = handler.zero_parameters(zeroing_info)
 
                 model = model_cpu.to(device)
+            
+            # Broadcast model parameters to all cores
+            for param in model.parameters():
+                xm.collective_broadcast([param.data], 0)
+            xm.mark_step()
 
             xm.rendezvous("model_zeroing_complete")
 

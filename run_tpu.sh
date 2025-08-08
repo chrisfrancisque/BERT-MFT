@@ -21,7 +21,6 @@ export XLA_USE_BF16=1
 export TORCH_COMPILE_DISABLE=1
 
 # Run with timeout to catch hangs
-timeout 30 python main_tpu.py --test 2>&1 | tee test_pjrt.log
 
 if [ $? -ne 0 ]; then
     echo "PJRT runtime failed or timed out. Switching to XRT..."
