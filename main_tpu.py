@@ -430,7 +430,7 @@ def main():
         print("This script must be run on a TPU VM")
         sys.exit(1)
 
-    print(f"Found {xm.xrt_world_size()} TPU cores")
+    print(f"Found {xr.world_size()} TPU cores")
 
     xmp.spawn(run_on_tpu, args =())
 
