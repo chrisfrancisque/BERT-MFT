@@ -36,10 +36,11 @@ class DetrimentalParameterHandler:
         
         # First pass: count total detrimental parameters
         total_detrimental = sum(p['num_detrimental'] for p in detrimental_params)
-        num_to_keep = int(np.ceil(total_detrimental * 0.1))
+        percentage = self.config.detrimental_threshold_percentile / 100.0
+        num_to_keep = int(np.ceil(total_detrimental * percentage))
         
         logger.info(f"Total detrimental parameters: {total_detrimental:,}")
-        logger.info(f"Will identify top 10% ({num_to_keep:,} parameters)")
+        logger.info(f"Will identify top {self.config.detrimental_threshold_percentile}% ({num_to_keep:,} parameters)")
         
         # Use a min-heap to keep only the top num_to_keep parameters
         # Heap elements are (movement_magnitude, param_name, index_tuple)

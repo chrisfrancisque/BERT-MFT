@@ -12,6 +12,7 @@ from gradient_analyzer import GradientAnalyzer
 from detrimental_params import DetrimentalParameterHandler
 from evaluation import ModelEvaluator
 from transformers import AutoModelForSequenceClassification
+from load_baseline import load_baseline_model
 
 def setup_logging(output_dir):
     """Setup logging configuration."""
@@ -82,18 +83,21 @@ def main():
         # STEP 2: Load Model
         # ============================================================
         logger.info("\n" + "="*40)
-        logger.info("STEP 2: Loading BERT Model")
+        logger.info("STEP 2: Loading Warmed Baseline Model")
         logger.info("="*40)
 
-        model = AutoModelForSequenceClassification.from_pretrained(
-            config.model_name,
-            num_labels=config.num_labels
+        # Load the baseline model that all methods share
+        model, tokenizer_loaded, baseline_info = load_baseline_model(
+            baseline_path='baseline_model_seed42',
+            device=str(device)
         )
-        model.to(device)
 
         total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-        logger.info(f"Model loaded: {config.model_name}")
+
+        logger.info(f"Model loaded: baseline_model_seed42 (warmed BERT)")
         logger.info(f"Total trainable parameters: {total_params:,}")
+        logger.info(f"Baseline warm-up accuracy: {baseline_info.get('warm_up_accuracy', 0):.4f}")
+        logger.info(f"Starting from same checkpoint as Full FT and LoRA for fair comparison")
 
         # ============================================================
         # STEP 3: Baseline Evaluation
@@ -180,12 +184,13 @@ def main():
         #Compile all results
         all_results = {
             'config': {
-                'model_name': config.model_name,
+                'model_name': 'baseline_model_seed42 (warmed bert-base-uncased)',
+                'baseline_accuracy': baseline_info.get('warm_up_accuracy', 0),
                 'train_samples': config.train_samples,
                 'batch_size': config.batch_size,
                 'learning_rate': config.learning_rate,
                 'device': config.device
-            }, 
+                    }, 
             'baseline_evaluation': baseline_metrics,
             'gradient_collection': {
                 'num_batches': gradient_results['num_batches'],

@@ -17,7 +17,7 @@ class GradientAnalysisConfig:
     # Training Settings for gradient colleciton
     batch_size: int = 32
     learning_rate: float = 2e-5
-    detrimental_threshold_percentile: int = 5
+    detrimental_threshold_percentile: int = 25
 
     # TPU settings
     tpu_num_cores: int = 8

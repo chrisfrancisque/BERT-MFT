@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 class GradientAnalyzer:
     """
-    Collects and analyzes gradients without updating model weights.
+    Collects and analyzes gradients wiout updating model weights.
     Stores actual gradient tensors with same shape as parameters.
     """
     
@@ -138,12 +138,13 @@ class GradientAnalyzer:
         total_params_analyzed = 0
 
         # Analyze each parameter
+        EXCLUDE_PATTERNS = ("classifier.", "pooler.")
         for name, param in self.model.named_parameters():
             if not param.requires_grad:
                 continue
             
-            if 'classifier' in name:
-                logger.info(f"Skipping classifier layer: {name}")
+            if any(pat in name for pat in EXCLUDE_PATTERNS):
+                logger.info(f"Skipping layer (excluded): {name}")
                 continue
 
             param_data = param.data.cpu()
