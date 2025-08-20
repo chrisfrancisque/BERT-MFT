@@ -1,0 +1,21 @@
+CHECKPOINT SUMMARY
+==================
+
+Full Fine-Tuning (FFT) Checkpoints:
+- checkpoint_50pct_baseline: 48.86% accuracy (baseline)
+- checkpoint_55pct: 55.09% accuracy
+- checkpoint_60pct: 60.42% accuracy  
+- checkpoint_65pct: 70.37% accuracy (mislabeled)
+- checkpoint_70pct: 70.37% accuracy
+- checkpoint_75pct: 77.78% accuracy
+- checkpoint_80pct: 84.26% accuracy
+- checkpoint_85pct: 86.57% accuracy
+- checkpoint_88pct: 89.00% accuracy
+- checkpoint_90pct: 90.51% accuracy
+
+LoRA Checkpoints (from same 48.86% baseline):
+- checkpoint_epoch_1: TBD accuracy
+- checkpoint_epoch_2: TBD accuracy  
+- checkpoint_epoch_3: TBD accuracy (final ~85-88% expected)
+
+Total models for MFT analysis: 13
