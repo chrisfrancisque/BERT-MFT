@@ -1,0 +1,85 @@
+[
+  {
+    "name": "baseline_50pct",
+    "path": "models/baseline/checkpoint_50pct_baseline",
+    "metadata": {
+      "accuracy": 0.48863636363636365,
+      "type": "baseline"
+    },
+    "baseline_accuracy": 0.4954128440366973,
+    "mft_accuracy": 0.5091743119266054,
+    "accuracy_change": 0.013761467889908174,
+    "detrimental_params": 40086411,
+    "detrimental_percentage": 36.8131181190315,
+    "params_zeroed": 10021603,
+    "zeroed_percentage": 9.203279759343895
+  },
+  {
+    "name": "fft_60pct",
+    "path": "models/fft_checkpoints/checkpoint_60pct",
+    "metadata": {
+      "accuracy": 0.6041666666666666,
+      "target": 0.6,
+      "epoch": 0,
+      "step": 300
+    },
+    "baseline_accuracy": 0.6055045871559633,
+    "mft_accuracy": 0.4908256880733945,
+    "accuracy_change": -0.11467889908256884,
+    "detrimental_params": 39759164,
+    "detrimental_percentage": 36.512592774792054,
+    "params_zeroed": 9939791,
+    "zeroed_percentage": 9.128148193698014
+  },
+  {
+    "name": "fft_75pct",
+    "path": "models/fft_checkpoints/checkpoint_75pct",
+    "metadata": {
+      "accuracy": 0.7777777777777778,
+      "target": 0.75,
+      "epoch": 0,
+      "step": 450
+    },
+    "baseline_accuracy": 0.7798165137614679,
+    "mft_accuracy": 0.5091743119266054,
+    "accuracy_change": -0.27064220183486243,
+    "detrimental_params": 40581020,
+    "detrimental_percentage": 37.26733936472336,
+    "params_zeroed": 10145255,
+    "zeroed_percentage": 9.31683484118084
+  },
+  {
+    "name": "fft_85pct",
+    "path": "models/fft_checkpoints/checkpoint_85pct",
+    "metadata": {
+      "accuracy": 0.8657407407407407,
+      "target": 0.85,
+      "epoch": 0,
+      "step": 550
+    },
+    "baseline_accuracy": 0.8646788990825688,
+    "mft_accuracy": 0.4908256880733945,
+    "accuracy_change": -0.3738532110091743,
+    "detrimental_params": 41982195,
+    "detrimental_percentage": 38.55410012712821,
+    "params_zeroed": 10495549,
+    "zeroed_percentage": 9.638525261368072
+  },
+  {
+    "name": "fft_90pct",
+    "path": "models/fft_checkpoints/checkpoint_90pct",
+    "metadata": {
+      "accuracy": 0.9050925925925926,
+      "target": 0.9,
+      "epoch": 0,
+      "step": 1000
+    },
+    "baseline_accuracy": 0.9036697247706422,
+    "mft_accuracy": 0.4908256880733945,
+    "accuracy_change": -0.41284403669724773,
+    "detrimental_params": 41564261,
+    "detrimental_percentage": 38.17029291355752,
+    "params_zeroed": 10391066,
+    "zeroed_percentage": 9.542573917147438
+  }
+]
