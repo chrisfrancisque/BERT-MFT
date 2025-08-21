@@ -1,0 +1,20 @@
+[
+  {
+    "checkpoint": "models/baseline/checkpoint_50pct_baseline",
+    "original_accuracy": 0.4954128440366973,
+    "mft_accuracy": 0.5091743119266054,
+    "improvement": 0.013761467889908174
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_75pct",
+    "original_accuracy": 0.7798165137614679,
+    "mft_accuracy": 0.5091743119266054,
+    "improvement": -0.27064220183486243
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_90pct",
+    "original_accuracy": 0.9036697247706422,
+    "mft_accuracy": 0.5091743119266054,
+    "improvement": -0.3944954128440368
+  }
+]

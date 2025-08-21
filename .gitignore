@@ -52,4 +52,5 @@ full_experiment.log
 *.cache
 
 # HuggingFace
-.huggingface/
+.huggingface/mft_paper_results_*/*/pytorch_model.bin
+mft_paper_results_*/*/model.safetensors
