@@ -12,7 +12,7 @@ from copy import deepcopy
 
 class MFTHandler(nn.Module):
     """MFT handler with configurable masking ratio"""
-    def __init__(self, model, config, masking_ratio=0.02):  # Changed default to 0.1
+    def __init__(self, model, config, masking_ratio=0.1):  # Changed default to 0.1
         super().__init__()
         self.model = model
         self.config = config
@@ -132,7 +132,7 @@ class MFTHandler(nn.Module):
 
 
 def train_mft(model, train_dataloader, eval_dataloader, config, 
-              epochs=2, lr=5e-4, masking_ratio=0.2):
+              epochs=2, lr=5e-4, masking_ratio=0.1):
     """Train MFT masks"""
     # Create MFT handler with specified masking ratio
     mft_handler = MFTHandler(model, config, masking_ratio=masking_ratio)
@@ -255,7 +255,7 @@ def run_mft_on_checkpoint(checkpoint_path, train_dataloader, eval_dataloader, co
     
     # Train MFT with 10% masking (keeping 90%)
     mft_acc = train_mft(model, train_dataloader, eval_dataloader, config, 
-                        masking_ratio=0.02)  # Only mask 10%!
+                        masking_ratio=0.1)  # Only mask 10%!
     
     # Final evaluation
     print("\nFinal evaluation...")
