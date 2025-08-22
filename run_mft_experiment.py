@@ -34,9 +34,12 @@ def main():
     # List of checkpoints to test
     checkpoints = [
         ('models/baseline/checkpoint_50pct_baseline', 'baseline_50pct'),
+        ('models/fft_checkpoints/checkpoint_60pct', 'fft_60pct'),
         ('models/fft_checkpoints/checkpoint_75pct', 'fft_75pct'),
+        ('models/fft_checkpoints/checkpoint_85pct', 'fft_85pct'),
         ('models/fft_checkpoints/checkpoint_90pct', 'fft_90pct'),
     ]
+   
     
     all_results = []
     
