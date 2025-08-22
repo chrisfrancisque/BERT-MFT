@@ -1,0 +1,32 @@
+[
+  {
+    "checkpoint": "models/baseline/checkpoint_50pct_baseline",
+    "original_accuracy": 0.4954128440366973,
+    "mft_accuracy": 0.5355504587155964,
+    "improvement": 0.04013761467889909
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_60pct",
+    "original_accuracy": 0.6055045871559633,
+    "mft_accuracy": 0.6364678899082569,
+    "improvement": 0.03096330275229353
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_75pct",
+    "original_accuracy": 0.7798165137614679,
+    "mft_accuracy": 0.75,
+    "improvement": -0.029816513761467878
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_85pct",
+    "original_accuracy": 0.8646788990825688,
+    "mft_accuracy": 0.8509174311926605,
+    "improvement": -0.013761467889908285
+  },
+  {
+    "checkpoint": "models/fft_checkpoints/checkpoint_90pct",
+    "original_accuracy": 0.9036697247706422,
+    "mft_accuracy": 0.8910550458715596,
+    "improvement": -0.012614678899082632
+  }
+]
