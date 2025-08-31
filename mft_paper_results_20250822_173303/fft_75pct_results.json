@@ -1,6 +1,0 @@
-{
-  "checkpoint": "models/fft_checkpoints/checkpoint_75pct",
-  "original_accuracy": 0.7798165137614679,
-  "mft_accuracy": 0.75,
-  "improvement": -0.029816513761467878
-}
