@@ -1,6 +1,0 @@
-{
-  "checkpoint": "models/baseline/checkpoint_50pct_baseline",
-  "original_accuracy": 0.4954128440366973,
-  "mft_accuracy": 0.536697247706422,
-  "improvement": 0.041284403669724745
-}
