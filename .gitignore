@@ -1,56 +1,20 @@
-# Python
-venv/
-tpu-env/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-
-# OS
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# Logs
-*.log
-logs/
-
-# Results and outputs
-outputs/
-results/
+# Model checkpoints
+*.bin
 *.pt
 *.pth
 *.safetensors
-*.pkl
-*.json
-*.png
-*.jpg
 
-# TPU specific
-.tpu_logs/
-tpu_profile/
-*.profile
-test_pjrt.log
-test_xrt.log
-full_experiment.log
+# Large data files
+ground_truth.json
+predictions.json
+hessian_predictions.json
+sampled_params.json
 
-# IDE
-.vscode/
-.idea/
-*.iml
+# Environment
+bert-mft-env/
+__pycache__/
+*.pyc
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
-
-# Cache
-.cache/
-~/.cache/
-*.cache
-
-# HuggingFace
-.huggingface/mft_paper_results_*/*/pytorch_model.bin
-mft_paper_results_*/*/model.safetensors
+# Temporary files
+*.swp
+*.tmp
