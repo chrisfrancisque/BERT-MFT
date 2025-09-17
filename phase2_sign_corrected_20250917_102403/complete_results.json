@@ -1,0 +1,50 @@
+{
+  "timestamp": "20250917_102403",
+  "model_checkpoint": "models/fft_checkpoints/checkpoint_75pct",
+  "num_samples": 10000,
+  "baseline": {
+    "loss": 0.6599643793973056,
+    "accuracy": 0.7488532110091743
+  },
+  "ground_truth_stats": {
+    "total": 10000,
+    "detrimental": 3531,
+    "beneficial": 6469
+  },
+  "prediction_metrics": {
+    "confusion_matrix": {
+      "tp": 1843,
+      "fp": 3163,
+      "tn": 3306,
+      "fn": 1688
+    },
+    "precision": 0.36815821014782263,
+    "recall": 0.5219484565278958,
+    "f1_score": 0.43176759985943536,
+    "accuracy": 0.5149,
+    "correlation": -0.05576035706575983
+  },
+  "removal_comparison": {
+    "ground_truth_removal": {
+      "num_removed": 3531,
+      "loss": 0.6594548084519126,
+      "accuracy": 0.7488532110091743,
+      "delta_loss": -0.0005095709453929453,
+      "delta_accuracy": 0.0
+    },
+    "influence_removal": {
+      "num_removed": 5006,
+      "loss": 0.658542875810103,
+      "accuracy": 0.7534403669724771,
+      "delta_loss": -0.0014215035872026105,
+      "delta_accuracy": 0.004587155963302725
+    }
+  },
+  "summary": {
+    "sign_corrected_accuracy": 0.5149,
+    "sign_corrected_f1": 0.43176759985943536,
+    "sign_corrected_correlation": -0.05576035706575983,
+    "ground_truth_removal_accuracy_gain": 0.0,
+    "influence_removal_accuracy_gain": 0.004587155963302725
+  }
+}
